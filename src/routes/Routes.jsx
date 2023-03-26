@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../views/Home";
 import AOvni from "../views/AOvni";
 import EParanormal from "../views/EParanormal";
-import MyLeyendas from "../views/MyLeyendas";
+import MyLegends from "../views/MyLegends";
 
 const Router = () => {
     return (
@@ -12,7 +12,7 @@ const Router = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/ovni" element={<AOvni />}></Route>     
                 <Route path="/paranormal" element={<EParanormal />}></Route> 
-                <Route path="/leyendas" element={<MyLeyendas />}></Route>      
+                <Route path="/leyendas" element={<MyLegends />}></Route>      
             </Routes>
         </BrowserRouter>
     );
