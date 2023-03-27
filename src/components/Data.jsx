@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DataServices from "../service/DataServices";
+import GetData from "../service/GetData";
 
 const Data = () => {
   const [data, SetData] = useState([]);
@@ -7,7 +7,7 @@ const Data = () => {
   useEffect(() => {
     const fetchData = async () => {
       
-      const dataResponse = await DataServices();
+      const dataResponse = await GetData();
       SetData(dataResponse)
     } 
 
