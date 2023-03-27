@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
-import DataServices from '../service/DataServices';
+import DataServices from "../service/DataServices";
 
-const Data = () =>{
-    const [data, SetData] = useState ([]);
+const Data = () => {
+  const [data, SetData] = useState([]);
 
-    useEffect(()=>{
-        DataServices().then(stories =>{
-            SetData(stories)
-    })
-    console.log(data);
-});
+  useEffect(() => {
+    const fetchData = async () => {
+      
+      const dataResponse = await DataServices();
+      SetData(dataResponse)
+    } 
 
-return (
+    fetchData();
+ 
+     });
+
+  return (
     <div>
       <p>You can count on me</p>
     </div>
-  )
-}
+  );
+};
 
 export default Data;

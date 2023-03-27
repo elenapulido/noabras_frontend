@@ -1,7 +1,9 @@
 import React from 'react';
 import Data from './components/Data';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import axios from "axios";
 
+axios.defaults.baseURL = 'http://localhost:8080/';
 
 function App() {
   return (
@@ -13,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
