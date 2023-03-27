@@ -7,11 +7,9 @@ axios.defaults.baseURL = 'http://localhost:8080/';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Data></Data>}></Route>
-    </Routes>
-    </BrowserRouter> 
+    <>
+      <Router/>
+    </>
   );
 }
 
