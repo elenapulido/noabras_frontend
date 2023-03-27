@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../views/home/Home";
 import AOvni from "../views/ovni/AOvni";
 import EParanormal from "../views/paranormal/EParanormal";
-import MyLegends from "../views/legends/MyLegends";
+import MyLegends from "../views/legends/MyLegends.jsx";
 
 const Router = () => {
     return (
