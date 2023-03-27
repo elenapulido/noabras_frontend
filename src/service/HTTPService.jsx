@@ -1,3 +1,4 @@
+import http from "../httpApi";
 
 const getAll = () =>{
     return http.get("/model");
@@ -19,9 +20,24 @@ const remove = id => {
     return http.delete(`/model/${id}`);
 };
 
-const removeAll = () => {
-    return http.delete (`/model`);
+//const removeAll = () => {
+   // return http.delete (`/model`);
+//};
+
+const findByAuthority = authority => {
+    return http.get(`/model?Authority=${authority}`);
 };
 
-const findByTheme = aut
+const HTTPService = {
+    getAll,
+    get,
+    create,
+    update,
+    remove,
+    removeAll,
+    findByAuthority
+
+};
+
+export default HTTPService;
 
