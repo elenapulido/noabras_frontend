@@ -1,6 +1,6 @@
 import React from 'react';
 import Data from './components/Data';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Router from './routes/Routes'; 
 import axios from "axios";
 
 axios.defaults.baseURL = 'http://localhost:8081/';
