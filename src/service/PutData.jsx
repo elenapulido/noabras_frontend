@@ -1,22 +1,24 @@
 import axios from "axios";
 import React from "react";
+import http from "../httpApi";
 
-const baseURL = "http://localhost:8081/model";
 
 export default function PutData() {
   const [model, setModel] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`${baseURL}/id`).then((response) => {
+    axios.get(`${http}/id`).then((response) => {
       setModel(response.data);
     });
   }, []);
 
   function updateData() {
-    axios
-      .put(`${baseURL}/id`, {
+    axios.put(`${http}/${id}`, {
         name: "Hello World!",
-        description: "This is an updated post."
+        theme,
+        description: "This is an updated post.",
+        location,
+        url
       })
       .then((response) => {
         setModel(response.data);
@@ -28,6 +30,7 @@ export default function PutData() {
   return (
     <div>
       <h1>{model.name}</h1>
+      <p>{model.theme}</p>
       <p>{model.description}</p>
       <p>{model.location}</p>
       <image>{model.url}</image>

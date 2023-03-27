@@ -1,20 +1,20 @@
 import axios from "axios";
 import React from "react";
+import http from "../httpApi";
 
-const baseURL = "http://localhost:8081/model";
 
 export default function DeleteData() {
   const [model, setModel] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`${baseURL}/id`).then((response) => {
+    axios.get(`${http}/id`).then((response) => {
       setModel(response.data);
     });
   }, []);
 
   function deleteData() {
     axios
-      .delete(`${baseURL}/id`)
+      .delete(`${http}/id`)
       .then(() => {
         alert("Data deleted!");
         setModel(null)

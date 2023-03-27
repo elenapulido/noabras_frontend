@@ -1,13 +1,12 @@
 import axios from "axios";
 import React from "react";
-
-const baseURL = "http://localhost:8081/model";
+import http from "../httpApi";
 
 export default function GetData() {
   const [model, setModel] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
+    axios.get(http).then((response) => {
       setModel(response.data);
     });
   }, []);

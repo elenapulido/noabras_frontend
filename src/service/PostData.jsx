@@ -1,20 +1,21 @@
 import axios from "axios";
 import React from "react";
+import http from "../httpApi";
 
-const baseURL = "http://localhost:8081/model";
+// const baseURL = "http://localhost:8080/model";
 
 export default function PostData() {
   const [model, setModel] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`${baseURL}/id`).then((response) => {
+    axios.get(`${http}/id`).then((response) => {
       setModel(response.data);
     });
   }, []);
 
   function createData() {
     axios
-      .model(baseURL, {
+      .model(http, {
         name: "Hello World!",
         description: "This is a new post."
       })
