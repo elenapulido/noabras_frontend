@@ -1,9 +1,9 @@
 import React from "react";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../views/Home";
-import AOvni from "../views/AOvni";
-import EParanormal from "../views/EParanormal";
-import MyLegends from "../views/MyLegends";
+import Home from "../views/home/Home";
+import AOvni from "../views/ovni/AOvni";
+import EParanormal from "../views/paranormal/EParanormal";
+import MyLegends from "../views/legends/MyLegends";
 
 const Router = () => {
     return (
