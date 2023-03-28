@@ -14,11 +14,11 @@ function MyLegends() {
     SetMyLegends(dataResponse);
   };
 
-  let legends = () => {
-    MyLegends.map((data) => {
-      <li>{data}</li>;
-    });
-  };
+  // let legends = () => {
+  //   MyLegends.map((data) => {
+  //     <li>{data}</li>;
+  //   });
+  // };
   return (
     <div>
       Legends
@@ -29,7 +29,7 @@ function MyLegends() {
             <td>{data.theme}</td>
             <td>{data.description}</td>
             <td>{data.location}</td>
-            <td>{data.url}</td>
+            <td><img src={data.url} width={150} alt="" /></td>
           </tr>
         ))}
         ;
