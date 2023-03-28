@@ -7,7 +7,7 @@ import { Segment, Grid, Divider } from 'semantic-ui-react';
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 
-function MyLegends() {
+function MyLegendsCopy() {
   useEffect(() => {
     dataFetch();
   }, []);
@@ -29,8 +29,10 @@ function MyLegends() {
       <Navbar></Navbar>
 
     <div className="main-MyLegends">   
-    <div className="card" style={{ width: "18rem" }}></div>   
-      
+    <div className="card" key={data.id} style={{ width: "18rem" }}></div>   
+      <Segment>
+        <Grid columns={2} relaxed='very'>
+          <Grid.Column>
       <div>
         <h1>Legends</h1>
         <tbody>
@@ -46,11 +48,16 @@ function MyLegends() {
         </tbody>
       </div>
       
-      
+      </Grid.Column>
 
-      
-      
-      
+      <Grid.Column>
+      <aside>
+        <Formular />
+      </aside>
+      </Grid.Column>
+      </Grid>
+      <Divider vertical></Divider>
+      </Segment>
       
     </div>
     <Footer></Footer>
@@ -62,4 +69,4 @@ function MyLegends() {
   );
 }
 
-export default MyLegends;
+export default MyLegendsCopy;

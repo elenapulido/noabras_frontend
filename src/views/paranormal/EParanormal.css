@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonToHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+}

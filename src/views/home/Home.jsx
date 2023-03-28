@@ -19,7 +19,7 @@ function Home({ title, text, url }) {
             : "En nuestra web encontrarás  narraciones de hechos sobrenaturales, naturales, paranormales e increíbles o una mezcla de ellos, que se han transmitido de generación en generación en forma oral o escrita y que hoy compartimos con vosotros "}
         </p>
         <a
-          href={url ? url : "/leyendas"}
+          href={url ? url : "/paranormal"}
           target="_blank"
           className="btn btn-outline-secondary border-0"
           rel="noreferrer"
