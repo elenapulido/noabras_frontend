@@ -3,6 +3,7 @@ import HTTPService from '../../service/HTTPService';
 import { useState } from 'react';
 
 
+
 function Form() {
 
     const [tittle, setTittle] = useState('');
@@ -12,14 +13,14 @@ function Form() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const json = {
+        const data = {
             name: tittle,
             theme: category,
             description: description,
             location: location
         }
 
-        HTTPService().createData(json)
+        HTTPService().createData(data)
             .then(response => {
 
                 console.log(response.data);

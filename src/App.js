@@ -1,19 +1,39 @@
-import React from 'react';
-import Data from './components/Data';
+
+
 import Router from './routes/Routes'; 
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
-
-axios.defaults.baseURL = 'http://localhost:8081/';
-
 function App() {
+
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8081/model');
+        setData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   
       
   
   return (
     <>
-      <Data/>
+     <div>
+        {data.map((item) => (
+          <p key={item.id}>{item.text}</p>
+        ))}
+      </div>
+     
       <Router/>
      
      
@@ -22,4 +42,5 @@ function App() {
 
 }
 
-export default App;
+
+export default App
