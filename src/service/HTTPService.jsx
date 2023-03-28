@@ -34,7 +34,7 @@ const HTTPService = {
     create,
     update,
     remove,
-    removeAll,
+    //removeAll,
     findByAuthority
 
 };
