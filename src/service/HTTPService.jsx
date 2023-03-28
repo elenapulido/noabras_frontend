@@ -19,8 +19,9 @@ const HTTPService = () => {
 
 
   const createData = async (data) => {
+    console.log(data);
     const response = await axios.post(`${url}`, data);
-    return response.data;
+    
 
   };
 

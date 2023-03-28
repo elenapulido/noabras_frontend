@@ -12,13 +12,16 @@ function Form() {
     const [location, setLocation] = useState('');
 
     const handleSubmit = (event) => {
+        console.log(event);
         event.preventDefault();
         const data = {
             name: tittle,
             theme: category,
             description: description,
             location: location
-        }
+            
+ }
+ console.log(data);
 
         HTTPService().createData(data)
             .then(response => {
@@ -26,7 +29,7 @@ function Form() {
                 console.log(response.data);
             })
             .catch(error => {
-                console.error(error);
+                console.log(error.response);
 
             });
     }
