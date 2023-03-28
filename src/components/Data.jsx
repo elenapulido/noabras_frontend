@@ -18,7 +18,7 @@ const Data = () => {
 
   return (
     <div>
-      <p>You can count on me</p>
+     
     </div>
   );
 };

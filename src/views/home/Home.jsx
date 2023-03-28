@@ -1,9 +1,13 @@
 import React from "react";
+import Form from "../../components/form/Form";
+
 
 function Home(){
    
     return(
-        <div></div>
+        <div>
+            <Form/>
+        </div>
     )
 }
 export default Home

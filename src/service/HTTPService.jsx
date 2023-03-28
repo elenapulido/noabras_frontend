@@ -1,43 +1,54 @@
-import http from "../httpApi";
+import axios from 'axios';
 
-const getAll = () =>{
-    return http.get("/model");
-};
+const HTTPService = () => {
 
-const get = id => {
-    return http.get(`/model/${id}`);
-};
+  const url = 'http://localhost:8081/model';
 
-const create = data => {
-    return http.post("/model", data);
-};
 
-const update = (id, data) => {
-    return http.put (`/model/${id}`, data);
-}
+  const getAllData = async () => {
+    const response = await axios.get(`${url}`);
+    return response.data;
+  };
 
-const remove = id => {
-    return http.delete(`/model/${id}`);
-};
 
-//const removeAll = () => {
-   // return http.delete (`/model`);
-//};
+  const getDataById = async (id) => {
+    const response = await axios.get(`${url}/${id}`);
+    return response.data;
 
-const findByAuthority = authority => {
-    return http.get(`/model?Authority=${authority}`);
-};
+  };
 
-const HTTPService = {
-    getAll,
-    get,
-    create,
-    update,
-    remove,
-    removeAll,
-    findByAuthority
 
+  const createData = async (data) => {
+
+    const response = await axios.post(`${url}`, data);
+    return response.data;
+
+  };
+
+
+  const updateData = async (id, data) => {
+
+    const response = await axios.put(`${url}/${id}`, data);
+    return response.data;
+
+  };
+
+
+  const deleteData = async (id) => {
+
+    const response = await axios.delete(`${url}/${id}`);
+    return response.data;
+
+  };
+  return {
+    getAllData,
+    getDataById,
+    createData,
+    updateData,
+    deleteData,
+    url
+
+  };
 };
 
 export default HTTPService;
-
