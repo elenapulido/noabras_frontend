@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import Formular from "../../components/form/Formular";
 import GetData from "../../service/GetData";
+import "./MyLegends.css";
+
 
 function MyLegends() {
   useEffect(() => {
@@ -20,21 +23,27 @@ function MyLegends() {
   //   });
   // };
   return (
-    <div>
-      Legends
-      <tbody>
-        {MyLegends.map((data) => (
-          <tr key={data.id}>
-            <td>{data.name} </td>
-            <td>{data.theme}</td>
-            <td>{data.description}</td>
-            <td>{data.location}</td>
-            <td><img src={data.url} width={150} alt="" /></td>
-          </tr>
-        ))}
-        ;
-      </tbody>
+    <div className="main-MyLegends">
+      <div>
+        <h1>Legends</h1>
+        <tbody>
+          {MyLegends.map((data) => (
+            <tr key={data.id}>
+              <td>{data.name} </td>
+              <td>{data.theme}</td>
+              <td>{data.description}</td>
+              <td>{data.location}</td>
+              <td><img src={data.url} width={150} alt="" /></td>
+            </tr>
+          ))};
+        </tbody>
+      </div>
+
+      <div>
+        <Formular />
+      </div>
     </div>
+
   );
 }
 
