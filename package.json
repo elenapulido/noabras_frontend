@@ -13,17 +13,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "^5.0.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
-=======
->>>>>>> 628a679 (footer and card)
-=======
->>>>>>> 628a679 (footer and card)
-=======
->>>>>>> 628a679 (footer and card)
     "web-vitals": "^2.1.4"
   },
   "scripts": {
