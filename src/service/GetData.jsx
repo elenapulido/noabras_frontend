@@ -11,7 +11,11 @@ async function GetData() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default GetData;
+=======
+export default GetData;
+>>>>>>> 628a679 (footer and card)
 =======
 export default GetData;
 >>>>>>> 628a679 (footer and card)
