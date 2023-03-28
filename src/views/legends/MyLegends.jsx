@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import Formular from "../../components/form/Formular";
 import GetData from "../../service/GetData";
 import "./MyLegends.css";
-
+import { Segment, Grid, Divider } from 'semantic-ui-react';
+import Navbar from "../../components/navbar/Navbar";
 
 function MyLegends() {
   useEffect(() => {
@@ -23,7 +24,13 @@ function MyLegends() {
   //   });
   // };
   return (
-    <div className="main-MyLegends">
+    <div>
+      <Navbar></Navbar>
+
+    <div className="main-MyLegends">      
+      <Segment>
+        <Grid columns={2} relaxed='very'>
+          <Grid.Column>
       <div>
         <h1>Legends</h1>
         <tbody>
@@ -38,11 +45,22 @@ function MyLegends() {
           ))};
         </tbody>
       </div>
+      </Grid.Column>
 
-      <div>
+      <Grid.Column>
+      <aside>
         <Formular />
-      </div>
+      </aside>
+      </Grid.Column>
+      </Grid>
+      <Divider vertical></Divider>
+      </Segment>
+      
     </div>
+
+    </div>
+
+    
 
   );
 }

@@ -3,14 +3,15 @@
     padding: 0;
 }
 
+.main-MyLegends {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative; 
+}
+
 h1 {
     display: flex;
     justify-content: center;
     
-}
-
-.main-MyLegends {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
 }

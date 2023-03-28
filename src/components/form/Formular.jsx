@@ -46,9 +46,10 @@ const Formular = () => {
                     <input type="file" id='myfile' name='myfile'></input>
                 </Form.Field>                
                 <Button onClick={postData} type='submit'>Submit</Button>
-                <Button content='Like' icon='like'></Button>
+                <Button content='Hola' icon='like'></Button>
             </Form>
         </div>
+       
 
     )
 }
