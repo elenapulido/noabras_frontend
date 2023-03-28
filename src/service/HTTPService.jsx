@@ -19,7 +19,6 @@ const HTTPService = () => {
 
 
   const createData = async (data) => {
-
     const response = await axios.post(`${url}`, data);
     return response.data;
 
@@ -27,7 +26,6 @@ const HTTPService = () => {
 
 
   const updateData = async (id, data) => {
-
     const response = await axios.put(`${url}/${id}`, data);
     return response.data;
 
@@ -35,7 +33,6 @@ const HTTPService = () => {
 
 
   const deleteData = async (id) => {
-
     const response = await axios.delete(`${url}/${id}`);
     return response.data;
 
