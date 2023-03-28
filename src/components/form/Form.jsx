@@ -3,13 +3,13 @@ import HTTPService from '../../service/HTTPService';
 import { useState } from 'react';
 
 
-
 function Form() {
 
     const [tittle, setTittle] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
     const [location, setLocation] = useState('');
+    const [url, setUrl] = useState('');
 
     const handleSubmit = (event) => {
         console.log(event);
@@ -18,18 +18,19 @@ function Form() {
             name: tittle,
             theme: category,
             description: description,
-            location: location
-            
- }
- console.log(data);
+            location: location,
+            url: url
+
+        }
+        event.target.reset();
 
         HTTPService().createData(data)
             .then(response => {
+                console.log(response);
 
-                console.log(response.data);
             })
             .catch(error => {
-                console.log(error.response);
+                console.log(error);
 
             });
     }
@@ -54,10 +55,14 @@ function Form() {
                 </select>
             </div>
             <div className="mb-3">
+                <label className="form-label">Imagen</label>
+                <input type="text" className="form-control" id="exampleFormControlInput2" placeholder="Escribe la localización" onChange={(e) => setUrl(e.target.value)} />
+            </div>
+            <div className="mb-3">
                 <label className="form-label">Descripción</label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e) => setDescription(e.target.value)}></textarea>
             </div>
-            <button type="submit" className="btn btn-dark">Enviar</button>
+            <button type='submit' className="btn btn-dark">Enviar</button>
         </form>
 
     )

@@ -20,8 +20,9 @@ const HTTPService = () => {
 
   const createData = async (data) => {
     console.log(data);
-    const response = await axios.post(`${url}`, data);
     
+    const response = await axios.post(`${url}`, data,{headers:{"Content-Type" : "application/json"}});
+    return response.data;
 
   };
 
