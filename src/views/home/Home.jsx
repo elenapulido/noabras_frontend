@@ -1,14 +1,14 @@
 import React from "react";
-import "./Home.css";
-import BodyHome from "../../components/body/BodyHome";
-import Navbar from "../../components/navbar/Navbar"
+import BodyView from "../../components/body/BodyView";
+import Form from "../../components/form/Form";
+
 
 function Home() {
 
     return (
         <div>
-            <Navbar />
-            <BodyHome />           
+            <BodyView />
+            <Form />
 
         </div>
     )
