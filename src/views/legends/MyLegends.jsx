@@ -1,9 +1,18 @@
 import React from "react";
+import "./MyLegends.css";
+import Footer from "../../components/footer/Footer";
+import Formular from "../../components/form/Formular";
 
-function MyLeyendas(){
-    
-    return(
-        <div></div>
-    )
+function MyLegends() {
+  
+  return (      
+      
+    <div>
+     
+
+    </div>    
+
+  );
 }
-export default MyLeyendas
+
+export default MyLegends;
