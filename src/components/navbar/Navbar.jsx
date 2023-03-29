@@ -8,7 +8,7 @@ function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
-   <Link to="/"><img src={logo} alt="" /></Link>
+   <Link to="/"><img src={logo} alt="logo" /></Link>
    
       
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -16,13 +16,13 @@ function Navbar() {
           
           
           <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Menu
             </a>
             <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Experiencias paranormales</a></li>
-              <li><a className="dropdown-item" href="#"> Tus historias</a></li>
-              <li><a className="dropdown-item" href="#">Psicofonías</a></li>
+            <Link to="/leyendas"><li><p className="dropdown-item" >Experiencias paranormales</p></li></Link>
+            <Link to="/historias"><li><p className="dropdown-item" > Tus historias</p></li></Link>
+            <Link to="/"><li><p className="dropdown-item" >Psicofonías</p></li></Link>
             </ul>
           </li>
          
