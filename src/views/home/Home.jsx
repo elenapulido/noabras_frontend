@@ -1,6 +1,8 @@
 import React from "react";
 import BodyView from "../../components/body/BodyView";
-import Form from "../../components/form/Form";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer"
+
 
 
 function Home() {
@@ -8,8 +10,10 @@ function Home() {
 
     return (
         <div>
+            <Navbar />
             <BodyView />
-            <Form />
+            <Footer />
+            
 
         </div>
     )

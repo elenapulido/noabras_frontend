@@ -4,7 +4,7 @@ import { Form } from 'react-router-dom'
 function Histories() {
   return (
     <div>
-        <Form/>
+        <Form />
     </div>
   )
 }
