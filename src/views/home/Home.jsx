@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 import { Image } from 'react-bootstrap'
 import cuentosyleyendas from '../../assets/imagesHome/cuentosyleyendas.jpg'
 import "./Home.css";
+import BodyView from "../../components/body/BodyView";
+import Form from "../../components/form/Form";
 
 
 function Home({ title, text, url }) {
+  
   return (
     <div className="card text-center bg-dark animate__animated animate__fadeInUp">
       <div className="overflow">
@@ -29,6 +32,19 @@ function Home({ title, text, url }) {
       </div>
     </div>
   );
+
+
+
+
+
+
+   
+        <div>
+            <BodyView />
+            <Form />
+
+        </div>
+    )
 }
 
 Home.propTypes = {
