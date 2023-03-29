@@ -14,11 +14,10 @@ function BodyView() {
             console.log(error);
 
         });
-    }, []);
-
-  
+    }, []);  
 
  return (
+    
     <div>            
             <div className="main-view">
 
@@ -28,8 +27,8 @@ function BodyView() {
                         <img className="card-img-top" src={legend.url} alt="Card" />
                         <div className="card-body">
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item"><h5 className="card-title">{data.name}</h5></li>
-                                <li className="list-group-item"><p className="card-text">{data.description}</p></li>                            
+                                <li className="list-group-item"><h5 className="card-title">{legend.name}</h5></li>
+                                <li className="list-group-item"><p className="card-text">{legend.description}</p></li>                            
                             </ul>
                         </div>
                         <ul className="list-group list-group-flush">

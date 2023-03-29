@@ -1,7 +1,7 @@
 import React from "react";
 import "./MyLegends.css";
-import Footer from "../../components/footer/Footer";
-import Formular from "../../components/form/Formular";
+import BodyView from "../../components/body/BodyView";
+import Footer from "../../components/footer/Footer"
 
 function MyLegends() {
   
@@ -9,6 +9,8 @@ function MyLegends() {
       
     <div>
      
+     <BodyView />
+     <Footer></Footer>
 
     </div>    
 
