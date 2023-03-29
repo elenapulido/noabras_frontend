@@ -4,6 +4,7 @@ import Home from "../views/home/Home";
 import Histories from "../views/histories/Histories";
 import MyLegends from "../views/legends/MyLegends";
 import FormEdit from "../views/formEdit/FormEdit";
+import Psychofony from "../views/psychofonies/Psychofony";
 
 const Router = () => {
     return (
@@ -12,7 +13,8 @@ const Router = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/leyendas" element={<MyLegends />}></Route>    
                 <Route path="/historias" element={<Histories />}></Route>
-                <Route path="/edit/:id" element={<FormEdit />}></Route>      
+                <Route path="/edit/:id" element={<FormEdit />}></Route>
+                <Route path="/psicofonias" element={<Psychofony />}></Route>      
             </Routes>
         </BrowserRouter>
     );

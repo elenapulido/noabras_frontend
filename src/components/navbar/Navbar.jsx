@@ -17,7 +17,7 @@ function Navbar() {
             <ul className="dropdown-menu">
             <Link to="/leyendas"><li><p className="dropdown-item" >Experiencias paranormales</p></li></Link>
             <Link to="/historias"><li><p className="dropdown-item" > Tus historias</p></li></Link>
-            <Link to="/"><li><p className="dropdown-item">Psicofonías</p></li></Link>
+            <Link to="/psicofonias"><li><p className="dropdown-item">Psicofonías</p></li></Link>
             </ul>
           </li>
          </ul>
