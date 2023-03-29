@@ -1,0 +1,14 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 50vh;  
+    background-image: url('../../assets/imagesNavbar/door-13.jpg');
+    background-size: cover;  
+  }
+  
+  .main-header h1 {  
+    color: blueviolet;
+    font-style: italic;
+    font-size: 500%;
+  }
