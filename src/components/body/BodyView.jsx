@@ -19,28 +19,45 @@ function BodyView() {
   
 
  return (
-    <>
-        {data.map((legend)=>(
-            <div key={legend.id} className="card mb-3" style={{maxwidth: "540px"}}>
-                <div className="row g-0">
-                    <div className="col-md-4">
-                        <img src={legend.url} className="img-fluid rounded-start" alt="..." />
-                    </div>
-                    <div className="col-md-8">
+    <div>            
+            <div className="main-view">
+
+                {data.map((legend) => (
+
+                    <div className="card" key={legend.id} style={{ width: "18rem" }}>
+                        <img className="card-img-top" src={legend.url} alt="Card" />
                         <div className="card-body">
-                            <h5 className="card-title">{legend.tittle}</h5>
-                            <p className="card-text"><small className="text-body-secondary">{legend.theme}</small></p>
-                            <p className="card-text">{legend.description}</p>
-                           
+                            <ul className="list-group list-group-flush">
+                                <li className="list-group-item"><h5 className="card-title">{data.name}</h5></li>
+                                <li className="list-group-item"><p className="card-text">{data.description}</p></li>                            
+                            </ul>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">{legend.location}</li>
+                            <li className="list-group-item">{legend.theme}</li>
+                        </ul>
+                        <div className="card-body">
+                            <a href="#" className="buttonEdit">
+                                <button className="btn btn-primary" type="button">Editar</button></a>
+                            <a href="#" className="buttonEdit">
+                                <button className="btn btn-primary" type="button">Eliminar</button></a>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        ))}
-      </>      
+                ))}
+
+            </div >
+
+            <div className="d-grid gap-2 d-md-block">
+                <a className="buttonToHome" href={"/"}>
+                    <button className="btn btn-secondary" type="button">INICIO</button></a>                
+            </div>           
+
+        </div >
+
+    );     
         
-    )
+    
 };
 
 
