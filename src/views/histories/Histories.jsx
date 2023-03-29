@@ -1,7 +1,8 @@
 import React from 'react'
-import { Form } from 'react-router-dom'
+import Form from "../../components/form/Form"
 
 function Histories() {
+  
   return (
     <div>
         <Form />
