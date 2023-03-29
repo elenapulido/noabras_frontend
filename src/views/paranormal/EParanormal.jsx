@@ -26,8 +26,10 @@ function EParanormal() {
                     <div className="card" key={data.id} style={{ width: "18rem" }}>
                         <img className="card-img-top" src={data.url} alt="Card" />
                         <div className="card-body">
-                            <h5 className="card-title">{data.name}</h5>
-                            <p className="card-text">{data.description}</p>
+                            <ul className="list-group list-group-flush">
+                                <li className="list-group-item"><h5 className="card-title">{data.name}</h5></li>
+                                <li className="list-group-item"><p className="card-text">{data.description}</p></li>                            
+                            </ul>
                         </div>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">{data.location}</li>
