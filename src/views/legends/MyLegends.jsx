@@ -1,9 +1,12 @@
 import React from "react";
 
-function MyLeyendas(){
-    
-    return(
-        <div></div>
+
+function MyLegends() {
+
+    return (
+        <div>
+           
+        </div>
     )
 }
-export default MyLeyendas
+export default MyLegends

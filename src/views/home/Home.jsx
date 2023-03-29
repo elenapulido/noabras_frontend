@@ -3,13 +3,14 @@ import BodyView from "../../components/body/BodyView";
 import Form from "../../components/form/Form";
 
 
-function Home(){
-    
-   
-    return(
+function Home() {
+
+
+    return (
         <div>
-            <BodyView/>
-            <Form/>
+            <BodyView />
+            <Form />
+
         </div>
     )
 }
