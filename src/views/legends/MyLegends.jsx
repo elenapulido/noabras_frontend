@@ -14,11 +14,7 @@ function MyLegends() {
     SetMyLegends(dataResponse);
   };
 
-  let legends = () => {
-    MyLegends.map((data) => {
-      <li>{data}</li>;
-    });
-  };
+  
   return (
     <div>
       Legends
@@ -31,8 +27,7 @@ function MyLegends() {
             <td>{data.location}</td>
             <td>{data.url}</td>
           </tr>
-        ))}
-        ;
+        ))};
       </tbody>
     </div>
   );
