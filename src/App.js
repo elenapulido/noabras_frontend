@@ -1,5 +1,4 @@
 import React from 'react';
-import Data from './components/Data';
 import Router from './routes/Routes'; 
 import axios from "axios";
 
