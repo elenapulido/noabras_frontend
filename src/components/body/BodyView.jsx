@@ -1,8 +1,11 @@
 import HTTPService from "../../service/HTTPService";
 import React, { useState, useEffect } from "react";
+import EditForm from "../editForm/EditForm";
+import "./BodyView.css";
 
 function BodyView() {
     const [data, setData] = useState([]);
+    const [editingData, setEditingData] = useState(null);
 
     useEffect(() => {
 
@@ -15,7 +18,6 @@ function BodyView() {
 
             });
     }, []);
-
 
     const handleDelete = (id) => {
         if (window.confirm("¿Está seguro de que desea eliminar este elemento?")) {
@@ -40,10 +42,6 @@ function BodyView() {
         setEditingData(dataToEdit);
     }
 
-
-
-
-
     return (
         <>
             {editingData ? (
@@ -67,31 +65,21 @@ function BodyView() {
                                         <button className="btn btn-primary" onClick={() => handleEdit(legend.id)}>Editar</button>
                                         <button className="btn btn-primary" onClick={() => handleDelete(legend.id)}>Borrar</button>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     ))}
+                        <div className="d-grid gap-2 d-md-block">
+                                        <a className="buttonToHome" href={"/"}>
+                                            <button className="btn btn-secondary" type="button">INICIO</button></a>
+                        </div>
                 </div>
+                
+
             )}
         </>
     );
 }
-
-                ))}
-
-            </div >
-
-            <div className="d-grid gap-2 d-md-block">
-                <a className="buttonToHome" href={"/"}>
-                    <button className="btn btn-secondary" type="button">INICIO</button></a>                
-            </div>           
-
-        </div >
-
-    );     
-        
-    
-};
-
 
 export default BodyView

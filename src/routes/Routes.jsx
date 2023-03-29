@@ -3,9 +3,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../views/home/Home";
 import Histories from "../views/histories/Histories";
 import MyLegends from "../views/legends/MyLegends";
-import Histories from "../views/histories/Histories"
- import FormEdit from "../views/formEdit/FormEdit";
-
+import FormEdit from "../views/formEdit/FormEdit";
 
 const Router = () => {
     return (
