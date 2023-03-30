@@ -1,8 +1,8 @@
 import React from "react";
 import "./MyLegends.css";
-import BodyView from '../../components/body/BodyView'
+import BodyView from "../../components/body/BodyView";
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer"
 
 function MyLegends() {
   
@@ -13,10 +13,13 @@ function MyLegends() {
       <BodyView/>
       <Footer/>
      
+     <Navbar />
+     <BodyView />
+     <Footer />
 
     </div>    
 
   );
 }
 
-export default MyLegends;
+export default MyLegends
