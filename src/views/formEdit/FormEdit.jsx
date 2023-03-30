@@ -4,7 +4,7 @@ import EditForm from '../../components/editForm/EditForm'
 function FormEdit() {
   return (
     <div>
-        <EditForm/>
+      <EditForm />
     </div>
   )
 }

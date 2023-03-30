@@ -1,15 +1,12 @@
-
-import Router from './routes/Routes'; 
-
-
+import Router from './routes/Routes';
 
 
 function App() {
 
-return (
+  return (
     <>
-     <Router/>
-     </>
+      <Router />
+    </>
   );
 
 }

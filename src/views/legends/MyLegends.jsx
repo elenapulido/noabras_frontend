@@ -6,16 +6,16 @@ import ButtonTop from "../../components/elements/ButtonTop";
 
 
 function MyLegends() {
-  
-  return (      
-      
-    <div>
-      <Navbar/>
-      <BodyView/>
-      <Footer/>
-      <ButtonTop/>
 
-    </div>    
+  return (
+
+    <div>
+      <Navbar />
+      <BodyView />
+      <Footer />
+      <ButtonTop />
+
+    </div>
 
   )
 }

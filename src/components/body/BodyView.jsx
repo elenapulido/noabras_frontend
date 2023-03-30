@@ -44,10 +44,6 @@ function BodyView() {
         setEditingData(dataToEdit);
     }
 
-
-
-
-
     return (
         <>
             {editingData ? (
@@ -68,20 +64,20 @@ function BodyView() {
                                         <p className="card-text "><small className="text-body-secondary text-white">{legend.location}</small></p>
                                         <p className="card-text "><small className="text-body-secondary text-white">{legend.theme}</small></p>
                                         <p className="card-text ">{legend.description}</p>
-                                        
-                                            <button className="btn btn-light"  style={{margin:"15px"}} onClick={() => handleEdit(legend.id)}>Editar</button>
-                                            <button className="btn btn-light"   onClick={() => handleDelete(legend.id)}>Borrar</button>
-                                        
+
+                                        <button className="btn btn-light" style={{ margin: "15px" }} onClick={() => handleEdit(legend.id)}>Editar</button>
+                                        <button className="btn btn-light" onClick={() => handleDelete(legend.id)}>Borrar</button>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                     <div className="d-grid gap-2 d-md-block">
-                                        <a className="buttonToHome" href={"/"}>
-                                            <button className="btn btn-secondary" type="button">INICIO</button></a>
-                        </div>
-</div>
+                        <a className="buttonToHome" href={"/"}>
+                            <button className="btn btn-secondary" type="button">INICIO</button></a>
+                    </div>
+                </div>
             )}
         </>
     );

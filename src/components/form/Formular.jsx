@@ -20,7 +20,7 @@ const Formular = () => {
             description: description,
             location: location,
             url: url
-            
+
         }
         event.target.reset();
 
@@ -30,13 +30,13 @@ const Formular = () => {
             })
             .catch(error => {
                 console.log(error);
-            });        
+            });
     }
 
     return (
         <div className='main-form'>
             <h2>COMPARTE TU EXPERIENCIA</h2>
-            <Form className='create-form' onSubmit={handleSubmit}>                
+            <Form className='create-form' onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>TÍTULO</label>
                     <input onChange={(event) => { setTitle(event.target.value) }}
@@ -44,8 +44,8 @@ const Formular = () => {
                 </Form.Field>
                 <Form.Field>
                     <label>DESCRIPCIÓN</label>
-                    <TextArea onChange={(event) => { setDescription(event.target.value) }} 
-                    rows={7} placeholder="Cuéntanos tu experiencia..." />
+                    <TextArea onChange={(event) => { setDescription(event.target.value) }}
+                        rows={7} placeholder="Cuéntanos tu experiencia..." />
                 </Form.Field>
                 <Form.Field label='TIPO' control='select' onChange={(event) => { setCategory(event.target.value) }} >
                     <label>TIPO</label>
@@ -59,15 +59,14 @@ const Formular = () => {
                     <input onChange={(event) => { setLocation(event.target.value) }}
                         placeholder='Localización experiencia' type="text" />
                 </Form.Field>
-                
                 <Form.Field>
                     <label for="myfile">CARGAR IMÁGENES</label>
                     <input type="file" id='myfile' name='myfile'></input>
-                </Form.Field>                
+                </Form.Field>
                 <Button type="submit" content='Enviar' icon='like'></Button>
-                <Button type="submit" content='Cancelar' icon='cancel' href='/'></Button>              
+                <Button type="submit" content='Cancelar' icon='cancel' href='/'></Button>
             </Form>
-        </div>       
+        </div>
 
     )
 }
@@ -76,5 +75,5 @@ export default Formular
 
 
 
- 
+
 

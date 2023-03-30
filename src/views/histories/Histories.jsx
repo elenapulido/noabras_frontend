@@ -6,7 +6,6 @@ import Navbar from '../../components/navbar/Navbar'
 function Histories() {
 
   return (
-
     <div>
       <Navbar />
       <Form />

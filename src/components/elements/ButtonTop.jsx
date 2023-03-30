@@ -25,16 +25,15 @@ const ButtonTop = () => {
 
     window.addEventListener('scroll', toggleVisible);
 
-  return (
-    <div>
+    return (
+        <div>
 
-        <Button>
-            <FaArrowCircleUp onClick={scrollTop}
-            style={{display: visible ? 'inline' : 'none'}} />
-        </Button>
+            <Button>
+                <FaArrowCircleUp onClick={scrollTop} style={{ display: visible ? 'inline' : 'none' }} />
+            </Button>
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default ButtonTop
