@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
-
-function Navbar() {
-  return (
-    <div className='main-navbar'>
-    <nav className="navbar navbar-expand-lg bg-dark">
-    <div className="container-fluid">
-   <Link to="/"><img src={logo} alt="logo" /></Link>
-   <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-=======
 
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
@@ -51,7 +35,6 @@ function Navbar() {
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle text-white" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
->>>>>>> ca16ae9bbbf27c50e7fe4b2d512b8926f73f76f7
               Menu
             </a>
             <ul className="dropdown-menu bg-dark">
@@ -62,15 +45,6 @@ function Navbar() {
           </li>
          </ul>
         <form className="d-flex" role="search">
-<<<<<<< HEAD
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  </div>
-=======
           <input className="form-control me-2" type="search" placeholder="Search" value={searchTerm} onChange={handleChange} aria-label="Search"/>
           <button className="btn btn-outline-success" type="submit">Search</button>
           <ul>
@@ -87,7 +61,6 @@ function Navbar() {
     </div>
   </nav>
   </>
->>>>>>> ca16ae9bbbf27c50e7fe4b2d512b8926f73f76f7
   )
 }
 

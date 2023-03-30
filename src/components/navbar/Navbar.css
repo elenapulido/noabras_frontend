@@ -1,27 +1,6 @@
-<<<<<<< HEAD
-.main-header {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 50vh;  
-    background-image: url('../../assets/imagesNavbar/door-13.jpg');
-    background-size: cover;  
-  }
-  
-  .main-header h1 {  
-    color: blueviolet;
-    font-style: italic;
-    font-size: 500%;
-  }
-
-  .main-navbar {
-    background-color: black;
-  }
-=======
 .logo{
     max-width: 80%;
 }
 .navbar-expand-lg{
     display: flex;
 }
->>>>>>> ca16ae9bbbf27c50e7fe4b2d512b8926f73f76f7

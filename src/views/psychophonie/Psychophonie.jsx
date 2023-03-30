@@ -7,11 +7,8 @@ function Psychophonie() {
   return (
     <div>
       <Navbar />
-     <IFrame/>
-
+      <IFrame />
       <Footer />
-
-
     </div>
   )
 }
