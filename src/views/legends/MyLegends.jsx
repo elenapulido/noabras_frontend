@@ -12,10 +12,6 @@ function MyLegends() {
       <Navbar/>
       <BodyView/>
       <Footer/>
-     
-     <Navbar />
-     <BodyView />
-     <Footer />
 
     </div>    
 

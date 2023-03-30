@@ -1,0 +1,6 @@
+.main-iframe{
+    background-color: #212121;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10%;
+}

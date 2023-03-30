@@ -39,7 +39,7 @@ const Formular = () => {
             <Form className='create-form' onSubmit={handleSubmit}>                
                 <Form.Field>
                     <label>TÍTULO</label>
-                    <input onChange={(event) => { setTitle(event.target.value) }}
+        git            <input onChange={(event) => { setTitle(event.target.value) }}
                         placeholder='Título experiencia' type="text" autoFocus />
                 </Form.Field>
                 <Form.Field>
