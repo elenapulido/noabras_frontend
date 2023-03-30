@@ -8,7 +8,8 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <BodyHome />                              
+            <BodyHome />
+           
             <Footer />
 
         </div>

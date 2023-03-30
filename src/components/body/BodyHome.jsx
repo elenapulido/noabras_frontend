@@ -1,8 +1,11 @@
 import React from 'react'
+import fondo from "../../assets/fondo.jpg"
 
-const BodyHome = () => {
+function BodyHome() {
   return (
-    <div>VISTA PRINCIPAL</div>
+    <div>
+        <img src={fondo} alt="imagen" width={"100%"}/>
+    </div>
   )
 }
 
