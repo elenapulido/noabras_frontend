@@ -65,7 +65,7 @@ const EditForm = ({ data, setData, onSubmit, onCancel }) => {
                     <label for="myfile">CARGAR IMÁGENES</label>
                     <input type="file" id='myfile' name='myfile'></input>
                 </Form.Field>                
-                <Button content='Enviar' icon='like'></Button>
+                <Button content='Enviar' icon='like' href='/'></Button>
                 <Button content='Cancelar' icon='cancel' href='/'></Button>                
             </Form>
         </div>

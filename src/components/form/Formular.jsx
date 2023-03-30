@@ -58,17 +58,12 @@ const Formular = () => {
                     <label>LOCALIZACIÓN</label>
                     <input onChange={(event) => { setLocation(event.target.value) }}
                         placeholder='Localización experiencia' type="text" />
-                </Form.Field>
-                <Form.Field>
-                    <label>IMAGEN</label>
-                    <input onChange={(event) => { setUrl(event.target.value) }}
-                        placeholder='Imagen experiencia' type="text" />
-                </Form.Field>
+                </Form.Field>                
                 <Form.Field>
                     <label for="myfile">CARGAR IMÁGENES</label>
                     <input type="file" id='myfile' name='myfile'></input>
                 </Form.Field>                
-                <Button content='Enviar' icon='like'></Button>
+                <Button content='Enviar' icon='like' href='/'></Button>
                 <Button content='Cancelar' icon='cancel' href='/'></Button>                
             </Form>
         </div>       
