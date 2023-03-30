@@ -3,7 +3,7 @@ import { Spotify } from 'react-spotify-embed'
 
 const IFrame = () => {
   return (
-    <div>
+    <div className='main-iframe'>
         {/* <iframe width={420} height={315} 
         src='https://open.spotify.com/embed/album/4xwx0x7k6c5VuThz5qVqmV?utm_source=generator'>
             frameborder="0" allowfullscreen            

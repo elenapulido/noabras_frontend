@@ -3,16 +3,8 @@
     padding: 0;
 }
 
-.main-view {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    position: relative; 
-}
-
-h1 {
-    display: flex;
-    justify-content: center;    
+.main-view {    
+    background-color: #212121;
 }
 
 .buttonToHome {

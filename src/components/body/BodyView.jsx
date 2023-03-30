@@ -49,21 +49,21 @@ function BodyView() {
                     <EditForm data={editingData} onSubmit={handleEdit} onCancel={handleEdit} />
                 </div>
             ) : (
-                <div>
+                <div className="main-view">
                     {data.map((legend) => (
-                        <div key={legend.id} className="card mb-3" style={{ maxwidth: "100px" }}>
+                        <div key={legend.id} className="card mb-3 bg-dark" style={{ maxwidth: "100px" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">
                                     <img src={legend.url} className="img-fluid rounded-start" alt="..." />
                                 </div>
-                                <div className="col-md-8">
+                                <div className="col-md-8 text-white">
                                     <div className="card-body">
                                         <h5 className="card-title">{legend.name}</h5>
-                                        <p className="card-text"><small className="text-body-secondary">{legend.location}</small></p>
-                                        <p className="card-text"><small className="text-body-secondary">{legend.theme}</small></p>
+                                        <p className="card-text"><small className="text-body-secondary text-white">{legend.location}</small></p>
+                                        <p className="card-text"><small className="text-body-secondary text-white">{legend.theme}</small></p>
                                         <p className="card-text">{legend.description}</p>
-                                        <button className="btn btn-primary" onClick={() => handleEdit(legend.id)}>Editar</button>
-                                        <button className="btn btn-primary" onClick={() => handleDelete(legend.id)}>Borrar</button>
+                                        <button className="btn btn-light" onClick={() => handleEdit(legend.id)}>Editar</button>
+                                        <button className="btn btn-light" onClick={() => handleDelete(legend.id)}>Borrar</button>
                                     </div>
                                     
                                 </div>

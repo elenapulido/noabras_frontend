@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <div className='main-navbar'>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-dark">
     <div className="container-fluid">
    <Link to="/"><img src={logo} alt="logo" /></Link>
    <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Menu
             </a>
-            <ul className="dropdown-menu">
-            <Link to="/leyendas"><li><p className="dropdown-item" >Experiencias paranormales</p></li></Link>
-            <Link to="/historias"><li><p className="dropdown-item" > Tus historias</p></li></Link>
-            <Link to="/psicofonias"><li><p className="dropdown-item">Psicofonías</p></li></Link>
+            <ul className="dropdown-menu bg-dark">
+            <Link to="/leyendas"><li><p className="dropdown-item text-white" >Experiencias paranormales</p></li></Link>
+            <Link to="/historias"><li><p className="dropdown-item text-white" > Tus historias</p></li></Link>
+            <Link to="/psicofonias"><li><p className="dropdown-item text-white">Psicofonías</p></li></Link>
             </ul>
           </li>
          </ul>
