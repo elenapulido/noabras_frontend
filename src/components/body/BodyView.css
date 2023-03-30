@@ -1,0 +1,8 @@
+.main-view{
+    background-color: #212121;
+}
+.buttonToHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

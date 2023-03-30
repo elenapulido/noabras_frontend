@@ -1,6 +1,7 @@
 import HTTPService from "../../service/HTTPService";
 import React, { useState, useEffect } from "react";
 import EditForm from "../editForm/EditForm";
+import "./BodyView.css"
 
 
 function BodyView() {
@@ -54,27 +55,33 @@ function BodyView() {
                     <EditForm data={editingData} onSubmit={handleEdit} onCancel={handleEdit} />
                 </div>
             ) : (
-                <div>
+                <div className="main-view">
                     {data.map((legend) => (
-                        <div key={legend.id} className="card mb-3" style={{ maxwidth: "100px" }}>
+                        <div key={legend.id} className="card mb-3 bg-dark" style={{ maxwidth: "100px" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">
                                     <img src={legend.url} className="img-fluid rounded-start" alt="..." />
                                 </div>
                                 <div className="col-md-8">
-                                    <div className="card-body">
-                                        <h5 className="card-title">{legend.name}</h5>
-                                        <p className="card-text"><small className="text-body-secondary">{legend.location}</small></p>
-                                        <p className="card-text"><small className="text-body-secondary">{legend.theme}</small></p>
-                                        <p className="card-text">{legend.description}</p>
-                                        <button className="btn btn-primary" onClick={() => handleEdit(legend.id)}>Editar</button>
-                                        <button className="btn btn-primary" onClick={() => handleDelete(legend.id)}>Borrar</button>
+                                    <div className="card-body text-white">
+                                        <h5 className="card-title ">{legend.name}</h5>
+                                        <p className="card-text "><small className="text-body-secondary text-white">{legend.location}</small></p>
+                                        <p className="card-text "><small className="text-body-secondary text-white">{legend.theme}</small></p>
+                                        <p className="card-text ">{legend.description}</p>
+                                        <div className="col-md-2 col-xs-6">
+                                            <button className="btn btn-light"  style={{margin:"15px"}} onClick={() => handleEdit(legend.id)}>Editar</button>
+                                            <button className="btn btn-light"   onClick={() => handleDelete(legend.id)}>Borrar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
-                </div>
+                    <div className="d-grid gap-2 d-md-block">
+                                        <a className="buttonToHome" href={"/"}>
+                                            <button className="btn btn-secondary" type="button">INICIO</button></a>
+                        </div>
+</div>
             )}
         </>
     );

@@ -1,38 +1,33 @@
 import React, { useState } from "react";
-// import HTTPService from "../../service/HTTPService";
 import { Button, Form, TextArea } from 'semantic-ui-react';
+import HTTPService from "../../service/HTTPService";
 
-const EditForm = ({ data, setData, onSubmit, onCancel }) => {
-    const [editedData, setEditedData] = useState({ ...data });    
+const EditForm = ({ data, setData, onCancel }) => {
+    const [editedData, setEditedData] = useState({ ...data });
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setEditedData({ ...editedData, [name]: value });
+      
     };
+   
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        onSubmit(editedData);
+        try {
+            const updatedData = await HTTPService().updateData(data.id, editedData);
+            setData(updatedData);
+        } catch (error) {
+            console.log(error);
+           
+        }
     };
-
-    // const handleEdit = (id) => {
-    //     if (window.confirm("¿Está seguro de que desea editar este elemento?")) {
-          
-    //         HTTPService().updateData(id)
-    //        .then(response => {
-    //               setData(response);
-    //             })
-    //             .catch(error => {
-    //               console.log(error);
-    //             });
-    //         }
-            
-    //     }      
-
+    
+   
     return (
         <div className='main-form'>
             <h2>EDITAR</h2>
-            <Form className='create-form' onSubmit={handleSubmit}>                
+            <Form className='create-form' onSubmit={handleSubmit}>
                 <Form.Field>
                     <label>TÍTULO</label>
                     <input value={editedData.name} onChange={handleInputChange} 
@@ -64,13 +59,15 @@ const EditForm = ({ data, setData, onSubmit, onCancel }) => {
                 <Form.Field>
                     <label for="myfile">CARGAR IMÁGENES</label>
                     <input type="file" id='myfile' name='myfile'></input>
-                </Form.Field>                
-                <Button content='Enviar' icon='like'></Button>
-                <Button content='Cancelar' icon='cancel' href='/'></Button>                
+                </Form.Field>  
+                <div>
+                <Button type="submit" content='Enviar' icon='like'></Button>
+                <Button  type="submit" content='Volver' icon='cancel' href='/leyendas' onClick={onCancel}></Button>  
+            </div>              
+                              
             </Form>
         </div>
     );
-
 };
 
-export default EditForm
+export default EditForm;

@@ -1,11 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Footer.css"
 
 
 function Footer() {
 
     return(
-      <div>
+      <div className="main-footer">
         <footer className="bg-dark text-center text-white">
             <div className="container p-4 pb-0">
                 <section className="mb-4">
