@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;    
+}
+
+.buttonToHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

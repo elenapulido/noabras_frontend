@@ -1,18 +1,18 @@
 import React from "react";
-import "./Home.css";
-import BodyView from "../../components/body/BodyView";
-import Formular from "../../components/form/Formular";
+import BodyHome from "../../components/body/BodyHome";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
 
-
     return (
         <div>
-            <BodyView />
-            <Formular />
+            <Navbar />
+            <BodyHome />                              
+            <Footer />
 
         </div>
     )
 }
 
-export default Home;
+export default Home

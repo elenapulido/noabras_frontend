@@ -1,7 +1,8 @@
 import React from "react";
 import "./MyLegends.css";
+import BodyView from "../../components/body/BodyView";
 import Footer from "../../components/footer/Footer";
-import Formular from "../../components/form/Formular";
+import Navbar from "../../components/navbar/Navbar";
 
 function MyLegends() {
   
@@ -9,10 +10,13 @@ function MyLegends() {
       
     <div>
      
+     <Navbar />
+     <BodyView />
+     <Footer />
 
     </div>    
 
   );
 }
 
-export default MyLegends;
+export default MyLegends

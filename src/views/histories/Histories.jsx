@@ -1,10 +1,16 @@
 import React from 'react'
-import { Form } from 'react-router-dom'
+import Formular from "../../components/form/Formular";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 function Histories() {
+
   return (
+
     <div>
-        <Form/>
+        <Navbar />
+        <Formular/>
+        <Footer />
     </div>
   )
 }
