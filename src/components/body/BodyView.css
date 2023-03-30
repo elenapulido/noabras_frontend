@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +16,16 @@ h1 {
     justify-content: center;    
 }
 
+=======
+.main-view{
+    background-color: #212121;
+}
+>>>>>>> ca16ae9bbbf27c50e7fe4b2d512b8926f73f76f7
 .buttonToHome {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
  .main-view1{
     background-color: #212121;
@@ -29,3 +36,6 @@ h1 {
  }
 
 
+=======
+}
+>>>>>>> ca16ae9bbbf27c50e7fe4b2d512b8926f73f76f7

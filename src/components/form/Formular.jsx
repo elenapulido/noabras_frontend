@@ -39,7 +39,7 @@ const Formular = () => {
             <Form className='create-form' onSubmit={handleSubmit}>                
                 <Form.Field>
                     <label>TÍTULO</label>
-        git            <input onChange={(event) => { setTitle(event.target.value) }}
+                    <input onChange={(event) => { setTitle(event.target.value) }}
                         placeholder='Título experiencia' type="text" autoFocus />
                 </Form.Field>
                 <Form.Field>
@@ -59,17 +59,13 @@ const Formular = () => {
                     <input onChange={(event) => { setLocation(event.target.value) }}
                         placeholder='Localización experiencia' type="text" />
                 </Form.Field>
-                <Form.Field>
-                    <label>IMAGEN</label>
-                    <input onChange={(event) => { setUrl(event.target.value) }}
-                        placeholder='Imagen experiencia' type="text" />
-                </Form.Field>
+                
                 <Form.Field>
                     <label for="myfile">CARGAR IMÁGENES</label>
                     <input type="file" id='myfile' name='myfile'></input>
                 </Form.Field>                
-                <Button content='Enviar' icon='like'></Button>
-                <Button content='Cancelar' icon='cancel' href='/'></Button>                
+                <Button type="submit" content='Enviar' icon='like'></Button>
+                <Button type="submit" content='Cancelar' icon='cancel' href='/'></Button>              
             </Form>
         </div>       
 
@@ -77,3 +73,8 @@ const Formular = () => {
 }
 
 export default Formular
+
+
+
+ 
+
