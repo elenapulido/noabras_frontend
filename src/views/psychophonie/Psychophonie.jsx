@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import Psicho from '../../components/psichophonie/Psicho'
+import IFrame from '../../components/iframe/IFrame'
 
 function Psychophonie() {
   return (
     <div>
       <Navbar />
-     <Psicho/>
+     <IFrame/>
 
       <Footer />
 

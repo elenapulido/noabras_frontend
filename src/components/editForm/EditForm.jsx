@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-//import HTTPService from "../../service/HTTPService";
+// import HTTPService from "../../service/HTTPService";
+import { Button, Form, TextArea } from 'semantic-ui-react';
 
-
-const EditForm = ({ data,setData, onSubmit, onCancel }) => {
-    const [editedData, setEditedData] = useState({ ...data });
-    
+const EditForm = ({ data, setData, onSubmit, onCancel }) => {
+    const [editedData, setEditedData] = useState({ ...data });    
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -28,41 +27,48 @@ const EditForm = ({ data,setData, onSubmit, onCancel }) => {
     //             });
     //         }
             
-    //     }
-      
+    //     }      
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label">Título</label>
-                <input type="text" className="form-control" id="name" name="name" value={editedData.name} onChange={handleInputChange} />
-            </div>
-          
-            <div className="mb-3">
-                <label htmlFor="location" className="form-label">Localización</label>
-                <textarea className="form-control" id="location" name="location" value={editedData.location} onChange={handleInputChange}></textarea>
-            </div>
-            <select required className="form-control" id="theme" onChange={handleInputChange} value={editedData.theme}>
-                    <option value="selected">Categoría</option>
-                    <option value="Mitos y Leyendas">Mitos y Leyendas</option>
-                    <option value="Avistamientos Ovnis">Avistamientos Ovnis</option>
-                    <option value="Experiencias paranormales">Experiencias paranormales</option>
-                </select>
-                <div className="mb-3">
-                <label className="form-label">Imagen</label>
-                <input type="text" className="form-control" id="exampleFormControlInput2" name="url" placeholder="Inserta una url" value={editedData.url} onChange={handleInputChange} />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="description" className="form-label">Descripción</label>
-                <textarea className="form-control" id="description" name="description" value={editedData.description} onChange={handleInputChange}></textarea>
-            </div>
-            <div>
-            <button type="submit" className="btn btn-primary me-2">Guardar</button>
-            <button type="button" className="btn btn-secondary" onClick={onCancel}>Cancelar</button>
-            
-            </div>
-         
-        </form>
+        <div className='main-form'>
+            <h2>EDITAR</h2>
+            <Form className='create-form' onSubmit={handleSubmit}>                
+                <Form.Field>
+                    <label>TÍTULO</label>
+                    <input value={editedData.name} onChange={handleInputChange} 
+                     type="text" id="name" name="name" />
+                </Form.Field>
+                <Form.Field>
+                    <label>DESCRIPCIÓN</label>
+                    <TextArea value={editedData.description} onChange={handleInputChange}
+                    rows={7} id="description" name="description" />
+                </Form.Field>
+                <Form.Field label='TIPO' id="theme" control='select' onChange={handleInputChange} 
+                    value={editedData.theme} >
+                    <label>TIPO</label>
+                    <input type="text" />
+                    <option value='Mitos y leyendas'>Mitos y leyendas</option>
+                    <option value='Avistamientos ovnis'>Avistamientos ovnis</option>
+                    <option value='Experiencias paranormales'>Experiencias paranormales</option>
+                </Form.Field>
+                <Form.Field>
+                    <label>LOCALIZACIÓN</label>
+                    <input value={editedData.location} onChange={handleInputChange}
+                         type="text" id="location" name="location" />
+                </Form.Field>
+                <Form.Field>
+                    <label>IMAGEN</label>
+                    <input value={editedData.url} onChange={handleInputChange}
+                         type="text" id="exampleFormControlInput2" name="url" />
+                </Form.Field>
+                <Form.Field>
+                    <label for="myfile">CARGAR IMÁGENES</label>
+                    <input type="file" id='myfile' name='myfile'></input>
+                </Form.Field>                
+                <Button content='Enviar' icon='like'></Button>
+                <Button content='Cancelar' icon='cancel' href='/'></Button>                
+            </Form>
+        </div>
     );
 
 };

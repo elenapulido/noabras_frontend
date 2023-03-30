@@ -1,11 +1,15 @@
 import React from 'react'
-import Form from "../../components/form/Form"
+import Footer from '../../components/footer/Footer'
+import Form from "../../components/form/Formular"
+import Navbar from '../../components/navbar/Navbar'
 
 function Histories() {
-  
+
   return (
     <div>
-        <Form />
+      <Navbar />
+      <Form />
+      <Footer />
     </div>
   )
 }
