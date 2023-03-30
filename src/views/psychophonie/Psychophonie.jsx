@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
-import IFrame from '../../components/navbar/IFrame';
+import IFrame from '../../components/psichophonie/IFrame';
 import Footer from '../../components/footer/Footer';
 
 const Psychophonie = () => {
