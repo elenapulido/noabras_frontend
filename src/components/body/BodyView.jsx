@@ -54,7 +54,7 @@ function BodyView() {
                         <div key={legend.id} className="card mb-3 bg-dark" style={{ maxwidth: "100px" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">
-                                    <img src={legend.url} className="img-fluid rounded-start" alt="..." />
+                                    <img src={legend.url}  className="img-fluid rounded-start" alt="..." width="350" />
                                 </div>
                                 <div className="col-md-8 text-white">
                                     <div className="card-body">
