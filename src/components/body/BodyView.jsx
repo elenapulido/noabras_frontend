@@ -62,8 +62,8 @@ function BodyView() {
                                         <p className="card-text"><small className="text-body-secondary text-white">{legend.location}</small></p>
                                         <p className="card-text"><small className="text-body-secondary text-white">{legend.theme}</small></p>
                                         <p className="card-text">{legend.description}</p>
-                                        <button className="btn btn-light" onClick={() => handleEdit(legend.id)}>Editar</button>
-                                        <button className="btn btn-light" onClick={() => handleDelete(legend.id)}>Borrar</button>
+                                        <button className="btn btn-light" type="button" style={{margin:"15px"}} onClick={() => handleEdit(legend.id)}>Editar</button>
+                                        <button className="btn btn-light" type="button" onClick={() => handleDelete(legend.id)}>Borrar</button>
                                     </div>
                                     
                                 </div>
