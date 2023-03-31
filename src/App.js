@@ -1,13 +1,14 @@
-import React from 'react';
-import Data from './components/Data';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import axios from "axios";
+import Router from './routes/Routes';
 
 
 function App() {
+
   return (
-   
+    <>
+      <Router />
+    </>
   );
+
 }
 
 export default App;

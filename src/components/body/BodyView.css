@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #212121;
+
+}
+
+.buttonToHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
