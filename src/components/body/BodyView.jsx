@@ -4,7 +4,7 @@ import EditForm from "../editForm/EditForm";
 import "./BodyView.css"
 
 
-function BodyView() {
+function BodyView({searchTerm}) {
     const [data, setData] = useState([]);
     const [editingData, setEditingData] = useState(null);
 
@@ -13,12 +13,22 @@ function BodyView() {
         HTTPService().getAllData()
             .then(response => {
                 setData(response);
+
             })
             .catch(error => {
                 console.log(error);
 
             });
     }, []);
+    const filteredData = data.filter((item) => {
+        if (searchTerm) {
+          return item.theme.toLowerCase().includes(searchTerm.toLowerCase());
+          
+        }
+        return true;
+      });
+    
+    
 
 
     const handleDelete = (id) => {
@@ -52,7 +62,7 @@ function BodyView() {
                 </div>
             ) : (
                 <div className="main-view">
-                    {data.map((legend) => (
+                    {filteredData.map((legend) => (
                         <div key={legend.id} className="card mb-3 bg-dark" style={{ maxwidth: "100px" }}>
                             <div className="row g-0">
                                 <div className="col-md-4">

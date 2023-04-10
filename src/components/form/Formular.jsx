@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, TextArea } from 'semantic-ui-react';
 import HTTPService from '../../service/HTTPService';
-import "./Formular.css";
+import "./formular.css";
 
 const Formular = () => {
     const [title, setTitle] = useState('');
