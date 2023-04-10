@@ -1,4 +1,6 @@
 <a name="Project: DESIGN YOUR PROJECT"></a>
+<img width="1579" alt="imagen" src="https://user-images.githubusercontent.com/119506074/229094798-5cdbb05b-b277-4e42-90ed-53dc77735ea0.png">
+
 
 # TEAM: Consult-Coders
 
