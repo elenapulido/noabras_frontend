@@ -4,12 +4,12 @@ import EditForm from "../editForm/EditForm";
 import "./BodyView.css"
 
 
-function BodyView({searchTerm}) {
+function BodyView({ searchTerm }) {
     const [data, setData] = useState([]);
     const [editingData, setEditingData] = useState(null);
+    const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
-
         HTTPService().getAllData()
             .then(response => {
                 setData(response);
@@ -20,22 +20,26 @@ function BodyView({searchTerm}) {
 
             });
     }, []);
-    const filteredData = data.filter((item) => {
+
+    useEffect(() => {
         if (searchTerm) {
-          return item.theme.toLowerCase().includes(searchTerm.toLowerCase());
-          
+            const filtered = data.filter(item => {
+                return item.theme.toLowerCase().includes(searchTerm.toLowerCase());
+            });
+            setFilteredData(filtered);
+        } else {
+            setFilteredData(data);
         }
-        return true;
-      });
-    
-    
+    }, [searchTerm, data]);
+
+
+
 
 
     const handleDelete = (id) => {
         if (window.confirm("¿Está seguro de que desea eliminar este elemento?")) {
             HTTPService().deleteData(id)
                 .then(() => {
-
                     HTTPService().getAllData()
                         .then(response => {
                             setData(response);
